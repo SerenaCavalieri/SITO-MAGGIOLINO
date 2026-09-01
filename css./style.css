@@ -462,6 +462,15 @@
     height: 320px;
   }
 
+    .hero-title {
+      font-size: 26px !important; /* Rimpicciolisce la scritta su telefono */
+      top: 70px !important;
+    }
+    .hero-image img, header img {
+      height: 300px !important; /* Altezza adatta allo schermo del telefono */
+    }
+
+
   .cards-grid-pairs {
     gap: 20px;
     margin-bottom: 30px;
@@ -499,6 +508,7 @@
   .footer-nav {
     gap: 20px;
   }
+  
 }
 
 
