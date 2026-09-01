@@ -438,8 +438,7 @@
 
 @media (max-width: 768px) {
   
-
-  main, footer, .page-container {
+main, footer, .page-container {
     padding: 15px 15px 25px 15px;
   }
 
@@ -462,14 +461,25 @@
     height: 320px;
   }
 
-    .hero-title {
-      font-size: 26px !important; /* Rimpicciolisce la scritta su telefono */
-      top: 70px !important;
-    }
-    .hero-image img, header img {
-      height: 300px !important; /* Altezza adatta allo schermo del telefono */
-    }
+  /* 1. Forza l'immagine ad avere un'altezza sufficiente su telefono */
+  header img,
+  .hero-image img {
+    height: 350px !important;
+    max-height: 350px !important;
+  }
 
+  /* 2. Rimpicciolisce qualsiasi titolo (h1 o .hero-title) dentro l'hero */
+  header h1,
+  .hero-image h1,
+  .hero-title {
+    font-size: 26px !important;
+    line-height: 1.1 !important;
+    top: 60px !important;
+    left: 20px !important;
+    right: 20px !important;
+    width: auto !important;
+  }
+}
 
   .cards-grid-pairs {
     gap: 20px;
@@ -509,7 +519,6 @@
     gap: 20px;
   }
   
-}
 
 
 @media (max-width: 480px) {
@@ -539,7 +548,20 @@
     height: 250px;
   }
 
-  
+  header h1,
+  .hero-image h1,
+  .hero-title {
+    font-size: 22px !important;
+    top: 60px !important;
+  }
+
+  header img,
+  .hero-image img {
+    height: 300px !important;
+    max-height: 300px !important;
+  }
+}
+
   .cards-grid-pairs {
     grid-template-columns: 1fr;
     gap: 25px;
@@ -571,4 +593,3 @@
     flex-direction: column;
     gap: 10px;
   }
-}
